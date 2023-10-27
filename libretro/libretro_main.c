@@ -26,7 +26,11 @@
 #include "core.h"
 #include "boot_intro.h"
 
+#if !defined(SF2000)
 #define SAMPLING_RATE 44100.0f
+#else
+#define SAMPLING_RATE 11025.0
+#endif
 #define VIDEO_PIXELS SCREEN_WIDTH * SCREEN_HEIGHT
 #define AUDIO_SAMPLES 1470
 
